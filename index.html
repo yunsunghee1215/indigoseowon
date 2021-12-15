@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>청소년을 위한 인문학 서점, 인디고 서원</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="css/reset.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+  <!--script----------------------------------------------------------------------------------------->
+  <script src="js/jquery-1.12.3.js"></script>
+  <script>
+    $(document).ready(function(){ //제이쿼리 시작
+
+      /*목차보기*/ 
+      $(".main_menu li.tit01").click(function(){
+        $(".tit01 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit02").click(function(){
+        $(".tit02 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit03").click(function(){
+        $(".tit03 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit04").click(function(){
+        $(".tit04 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit05").click(function(){
+        $(".tit05 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit06").click(function(){
+        $(".tit06 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit07").click(function(){
+        $(".tit07 .sub_menu").slideToggle();
+      });
+      $(".main_menu li.tit08").click(function(){
+        $(".tit08 .sub_menu").slideToggle();
+      });
+
+      $(".cont_open").click(function(){
+        $(this).hide();
+        $(".main_menu").slideToggle();
+      });
+      $(".cont_close").click(function(){
+        $(".main_menu").slideToggle();
+        $(".cont_open").slideToggle(500);
+      });
+
+      /*탭열기*/ 
+            /*
+      1. index() : 선택한 요소가 부모기준으로 몇번째 자식인지를 반환
+         0부터 시작, 첫번째 자식 = 0, 두번째 자식 = 1 .....
+      2. eq(숫자) : 같은 부모의 자식 중에 숫자에 해당하는 요소에 접근
+      */
+
+      // var aa = $(".tab_tit li.on").index();
+      // console.log(aa);
+
+      $(".main_pick li").click(function(){
+
+        var idx = $(this).index();
+        console.log(idx);
+
+        $(".main_pick li").removeClass("on");
+        // $(".tab_tit li").eq(idx).addClass("on")
+        $(this).addClass("on")
+        $(".sub_pick > div").hide();
+        $(".sub_pick > div").eq(idx).show();
+
+
+        });
+
+
+
+    }); //제이쿼리 끝
+  </script>
+  
+</head>
+<body>
+  <!-- #wrap-->
+  <div id="wrap">
+
+    <a href="#" class="cont_open">목차보기</a>
+    <div class="bottom_wrap">
+      <a href="#" class="cont_close">목차닫기</a>
+      <ul class="main_menu">
+        <li class="tit01">
+          <a href="#">인디고 서원</span></a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit02">
+          <a href="#">추천도서</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit03">
+          <a href="#">토론과 실천</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit04">
+          <a href="#">아름다운 참여</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit05">
+          <a href="#">인디고 그라운드</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit06">
+          <a href="#">공익법인 정세청세</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit07">
+          <a href="#">에코토피아</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+        <li class="tit08">
+          <a href="#">Book Store</a>
+          <ul class="sub_menu">
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+            <li><a href="#">서브메뉴</a></li>
+          </ul>
+        </li>
+      </ul><!--.//main_menu-->
+    </div>
+  
+
+    <header>
+      <h1><a href="#" class="hidden">Indigo Seowon</a></h1>
+      <button type="button" class="cart hidden">장바구니</button>
+      <button type="button" class="mypage hidden">마이페이지</button>
+    </header>
+
+    <!--#visual-->
+    <div id="visual">
+      <!--.img_box-->
+      <div class="img_box">
+        <p>청소년을 위한  인문학 서점</p>
+        <div class="logo_box"></div>
+      </div>
+      <!--//.img_box-->      
+    </div>
+    <!--//#visual-->
+
+    <!--#container-->
+    <div id="container">
+
+      <!--.sec_indigoing-->
+      <section class="sec_indigoing">
+        <div class="title_box">
+          <h5>청소년들이 직접 만드는 인문교양지</h5>
+          <h2>INDIGO<span>+ing</span></h2>
+        </div>
+        <div class="book_box">
+
+          <div class="book_box01">
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+          </div>
+          <div class="book_box02">
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+            <a href="#"><img src="img/indigoing_72.jpg" alt="인디고잉 72호"></a>
+            <a href="#"><img src="img/indigoing_71.jpg" alt="인디고잉 71호"></a>
+            <a href="#"><img src="img/indigoing_69.jpg" alt="인디고잉 69호"></a>
+          </div>
+        </div>
+        <!--.book_box-->
+
+        <p>
+          &lt;INDIGO+ing&gt;은 청소년들이 직접 기획하고 만드는<br>
+          청소년 인문교양지입니다.<br>
+          행복한 책읽기를 통해 건강한 사유를 키우는 청소년들이<br>
+          더 넓은 사회와 세계 속에서 주체적인 목소리를 내고<br>
+          변화를 창조하고자 하는 청소년 잡지입니다.
+        </p>
+      </section>
+      <!--//.sec_indigoing-->
+
+      <!--.sec_indigopick-->
+      <section class="sec_indigopick">
+        <div class="title_box">
+          <h5>이달의 추천도서</h5>
+          <h2>INDIGO’S <span>PICK</span></h2>
+        </div>
+        <div class="main_pick">
+          <ul class="clear">
+            <li class="on">문학</li>
+            <li>역사·사회</li>
+            <li>철학</li>
+            <li>예술</li>
+            <li>교육</li>
+            <li>생태·환경</li>
+          </ul>
+        </div>
+        <div class="sub_pick">
+          <div class="pick literature"> <!--문학-->
+            <div class="pick01">
+              <div class="txt_box">
+                <h4>
+                  바틀비 -<br><span>월 스트리트의 <br>한 필경사 이야기</span>
+                </h4>
+                <p>
+                  지음<span>_</span> 먼 멜빌<br>
+                  옮김<span>_</span> 추선정<br>
+                  출판사<span>_</span> 책봇에디스코
+                </p>
+              </div>
+              <div class="img_box">
+                <a href="#"><img src="img/pick2110_literature01.jpg" alt="바틀비- 월 스트리트의 한 필경사 이야기, 지음_먼 멜빌, 옮김_추선정, 출판사_책봇에디스코"></a>
+              </div>
+              <button type="button" class="arr_box hidden">다음</button>
+              <div class="link">
+                <p>이 책의 내용으로 청소년이 쓴 기사가 <span>&lt;INDIGO+ing 72호&gt;</span>에 있습니다.</p>
+                <a href="#" class="more">기사 읽어 보기</a>    
+              </div>
+            </div> <!--//.pick01-->
+          </div> <!--//문학-->
+          <div class="pick history"> <!--역사/사회-->
+            <div class="pick01">
+              <div class="txt_box">
+                <h4>
+                  폭력에 <br>반대합니다
+                </h4>
+                <p>
+                  지음<span>_</span> 아스트리드 린드그렌<br>
+                  옮김<span>_</span> 이유진<br>
+                  출판사<span>_</span>위고
+                </p>
+              </div>
+              <div class="img_box">
+                <a href="#"><img src="img/pick2110_history01.jpg" alt="폭력에 반대합니다, 지음_아스트리드 린드그렌, 옮김_이유진, 출판사_위고"></a>
+              </div>
+              <button type="button" class="arr_box hidden">다음</button>
+              <div class="link">
+                <p>이 책의 내용으로 청소년이 쓴 기사가 <span>&lt;INDIGO+ing 72호&gt;</span>에 있습니다.</p>
+                <a href="#" class="more">기사 읽어 보기</a>    
+              </div>
+            </div> <!--//.pick01-->
+          </div> <!--//역사/사회-->
+          <div class="pick philosophy"> <!--철학-->
+            <div class="pick01">
+              <div class="txt_box">
+                <h4>
+                  아렌트:  <br><span>어두운 시대의 삶</span>
+                </h4>
+                <p>
+                  지음<span>_</span> 앤 C. 헬러<br>
+                  옮김<span>_</span> 정찬형<br>
+                  출판사<span>_</span> 역사비평사
+                </p>
+              </div>
+              <div class="img_box">
+                <a href="#"><img src="img/pick2110_philosophy01.jpg" alt="바틀비- 월 스트리트의 한 필경사 이야기, 지음_먼 멜빌, 옮김_추선정, 출판사_책봇에디스코"></a>
+              </div>
+              <button type="button" class="arr_box hidden">다음</button>
+              <div class="link">
+                <p>이 책의 내용으로 청소년이 쓴 기사가 <span>&lt;INDIGO+ing 72호&gt;</span>에 있습니다.</p>
+                <a href="#" class="more">기사 읽어 보기</a>    
+              </div>
+            </div> <!--//.pick01-->
+          </div> <!--//철학-->
+          <div class="pick art"> <!--예술-->
+            <div class="pick01">
+              <div class="txt_box">
+                <h4>
+                  발칙한 <br>예술가들
+                </h4>
+                <p>
+                  지음<span>_</span> 윌 곰퍼츠<br>
+                  옮김<span>_</span> 강나은<br>
+                  출판사<span>_</span> RHK
+                </p>
+              </div>
+              <div class="img_box">
+                <a href="#"><img src="img/pick2110_art01.jpg" alt="바틀비- 월 스트리트의 한 필경사 이야기, 지음_먼 멜빌, 옮김_추선정, 출판사_책봇에디스코"></a>
+              </div>
+              <button type="button" class="arr_box hidden">다음</button>
+              <div class="link">
+                <p>이 책의 내용으로 청소년이 쓴 기사가 <span>&lt;INDIGO+ing 72호&gt;</span>에 있습니다.</p>
+                <a href="#" class="more">기사 읽어 보기</a>    
+              </div>
+            </div> <!--//.pick01-->
+          </div> <!--//예술-->
+          <div class="pick education"> <!--교육-->
+            <div class="pick01">
+              <div class="txt_box">
+                <h4>
+                  생각을 바꾸는 <br>생각들
+                </h4>
+                <p>
+                  지음<span>_</span> 비카스 샤<br>
+                  옮김<span>_</span> 임경은<br>
+                  출판사<span>_</span> 인플루엔션
+                </p>
+              </div>
+              <div class="img_box">
+                <a href="#"><img src="img/pick2110_education01.jpg" alt="바틀비- 월 스트리트의 한 필경사 이야기, 지음_먼 멜빌, 옮김_추선정, 출판사_책봇에디스코"></a>
+              </div>
+              <button type="button" class="arr_box hidden">다음</button>
+              <div class="link">
+                <p>이 책의 내용으로 청소년들이 쓴 글이 있습니다</p>
+                <a href="#" class="more">읽어 보기</a>    
+              </div>
+            </div> <!--//.pick01-->
+          </div> <!--//교육-->
+          <div class="pick environment"> <!--생태/환경-->
+            <div class="pick01">
+              <div class="txt_box">
+                <h4>
+                  호흡공동체
+                </h4>
+                <p>
+                  지음<span>_</span> 전치형<br>
+                  <!-- 옮김<span>_</span> -<br> -->
+                  출판사<span>_</span> 창비
+                </p>
+              </div>
+              <div class="img_box">
+                <a href="#"><img src="img/pick2110_environment01.jpg" alt="바틀비- 월 스트리트의 한 필경사 이야기, 지음_먼 멜빌, 옮김_추선정, 출판사_책봇에디스코"></a>
+              </div>
+              <button type="button" class="arr_box hidden">다음</button>
+              <div class="link">
+                <p>이 책의 내용으로 토론한 청소년의 이야기를 보실 수 있습니다.</p>
+                <a href="#" class="more">토론 보기</a>    
+              </div>
+            </div> <!--//.pick01-->
+          </div> <!--//생태/환경-->
+        </div>
+        <!--//.sub_pick-->
+
+      </section>
+      <!--//.sec_indigopick-->
+
+      <!--.sec_iybf2020-->
+      <section class="sec_iybf2020">
+        <div class="title_box">
+          <h5>인디고 유스 북페어</h5>
+          <h2>
+            INDIGO<br><span>YOUTH BOOK FAIR<br>2020</span>
+          </h2>
+        </div>
+        <div class="img_box">
+          <a href="#"><img src="img/iybf_2020_poster.jpg" alt="2020 인디고 유스 북페어 - 모두에게 이로윤 혁명"></a>
+        </div>
+        <div class="txt_box">
+          <h3>모두에게 이로운 혁명</h3>
+          <span>2020년 8월 29일(토) ~ 30일(일)</span>
+          <p>
+            인디고 유스 북페어는 공익법인 정세청세가 주최하고<br>
+            인디고 서원이 주관하는 행사로 2008년부터 2년에 한 번씩<br>
+            책을 매개로 하여 열리는 인문·문화·교육의 장(ground)입니다.<br>
+            지구 곳곳에서 창조적 실천을 통해 희망의 싹을 틔우고 있는<br>
+            이들을 초청하여 정의로운 세상을 향한 비전과 가능성을<br>
+            공유하는 자리입니다.
+          </p>
+          <a href="#" class="more">자세히 보기</a>
+        </div>
+      </section>
+      <!--//.sec_iybf2020-->
+
+      <!--.sec_welcome-->
+      <section class="sec_welcome">
+        <div class="title_box">
+          <h5>궁금해요! 인디고 서원</h5>
+          <h2>
+            <span>WELCOME TO</span><br>INDIGO
+          </h2>
+        </div>
+        <div class="img_box">
+          <a href="#"><img src="img/img_welcome.jpg" alt="인디고 서원 우편함 사진"></a>
+        </div>
+        <div class="txt_box">
+          <p>
+            저희 인디고 서원을<br>
+            보다 깊게 알고자 하시는<br>
+            학교, 단체, 기관의<br>
+            단체방문 사전 신청을<br>
+            받습니다.
+          </p>
+          <a href="#" class="more">방문 신청하기</a>
+        </div>
+      </section>
+      <!--//.sec_welcome-->
+      
+    </div>
+    <!--//#container-->
+
+    <footer>
+      <div class="f_bg">
+        <p>
+          청소년을 위한 인문학 서점, 인디고 서원
+        </p>
+        <p>
+          사업자등록번호 : 617-19-90995<br>
+          통신판매업 신고번호 : 2005-39호<br>
+          주소 : 613-814 부산광역시 수영구수영로 408번길 28<br>
+          전화 : 051-628-2897<br>
+          팩스 : 051-628-2885<br>
+          이메일 : indigo-book@hanmail.net
+        </p>
+        </p>
+        <ul class="f_sns">
+          <li class="facebook"><a href="#" class="hidden">페이스북 바로가기</a></li>
+          <li class="twitter"><a href="#" class="hidden">트위터 바로가기</a></li>
+          <li class="youtube"><a href="#" class="hidden">유튜브 바로가기</a></li>
+        </ul>
+      </div>
+      <div class="f_info">
+        <ul class="clear">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">청소년보호정책</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <p>Copyright © Indigo since 2004 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+  <!--//#wrap-->
+</body>
+</html>
