@@ -1,6 +1,17 @@
 @charset 'utf-8';
 
-#wrap{min-width: 320px;}
+#wrap{
+      min-width: 320px; max-width: 480px;
+      margin: 0 auto;}
+
+
+.bottom_wrap{
+      width: 100%;
+      position: fixed; bottom: 0px; left: 50%;
+      z-index: 999;
+      max-width: 480px;
+      transform: translateX(-50%);
+      }
 
 .cont_open{
       display: block; width: 84px; height: 51px;
@@ -8,22 +19,18 @@
       text-align: center; padding-top: 20px;
       background: url(../img/icon_contents.png) no-repeat center / 84px auto;
       /* display: none; */
-      position: fixed; bottom: 0; left: 30px;
+      position: absolute; bottom: 0; left: 0;
       z-index: 999;
-      }
-.bottom_wrap{
-      width: 100%;
-      position: absolute; bottom: 0px; left: 0;
-      position: fixed; bottom: 0; left: 0px;
-      /* z-index: 999; */
-      }
+      margin-left: 30px;
+      }      
 .cont_close{
+      position: absolute; bottom: 0; left: 0;
       display: block; 
       width: 84px; height: 51px;
-      margin-left: 30px;
       font-size: 16px; font-weight: 400; color: #fff7d2;
       text-align: center; padding-top: 20px;
       background: url(../img/icon_contents.png) no-repeat center / 84px auto;
+      margin-left: 30px;
       }
 .main_menu{
       display: none;
@@ -55,9 +62,9 @@
       font-size: 15px;
       }
 
-header{width: 100%; height: 65px;
+header{width: 100%; height: 65px; max-width: 480px;
        background-color: #fff7d2;
-       position: fixed; top: 0; left: 0;
+       position: fixed; top: 0; left: 50%; transform: translateX(-50%);
        z-index: 999;
       }
 header h1 a{display: block;
@@ -97,7 +104,8 @@ header button.mypage{right: 20px;
                   margin-bottom: 15px;
                  }
 .sec_indigoing span{color: #898989;}
-.sec_indigoing div{white-space: nowrap; overflow-x: scroll;
+.sec_indigoing div{white-space: nowrap; 
+      /* overflow-x: scroll; */
                    margin-bottom: 15px;
                   }
 /* .sec_indigoing div a{display: block; width: 135px; height: 160px; 
@@ -155,7 +163,27 @@ header button.mypage{right: 20px;
                   }
 .sec_indigopick span{color: #f87b00;}
 .sec_indigopick .main_pick{padding-left: 30px;}
-.sec_indigopick ul{white-space: nowrap; overflow-x: scroll;}
+.sec_indigopick ul{white-space: nowrap; overflow-x: scroll;
+      scrollbar-color: #6969dd #e0e0e0; scrollbar-width: thin;
+}
+
+/* 스크롤바 설정*/ 
+/* .sec_indigopick ul::-webkit-scrollbar{
+      scrollbar-width: thin;
+      width: 0;} 
+.sec_indigopick ul::-webkit-scrollbar-thumb{ 
+      background-clip: padding-box; 
+      scrollbar-width: thin;
+      background-color: red;
+      border-radius: 10px; 
+} 
+.sec_indigopick ul::-webkit-scrollbar-track{ 
+      background-color: rgba(0,0,0,0);
+      box-shadow: inset 0px 0px 5px white;
+} */
+  
+
+
 .sec_indigopick li{display: inline-block;
                    margin: 0 40px 20px 0;
                    font-size: 16px; font-weight: 400; color: #7e7e7e;
